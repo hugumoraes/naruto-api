@@ -10,17 +10,18 @@ class Character extends Model {
         village_id: Sequelize.INTEGER,
         ninja_rank: Sequelize.STRING,
         sex: Sequelize.STRING,
-        jutsus: Sequelize.ARRAY(Sequelize.STRING),
         img: Sequelize.STRING,
       },
       {
         sequelize,
+        tableName: 'characters',
       },
     );
   }
 
   static associate(models) {
     this.belongsTo(models.Village, { foreignKey: 'village_id' });
+    this.belongsToMany(models.Jutsu, { foreignKey: 'jutsu_id', through: 'characters_jutsus' });
   }
 }
 

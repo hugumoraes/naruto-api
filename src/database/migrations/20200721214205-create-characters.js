@@ -32,9 +32,6 @@ module.exports = {
     sex: {
       type: Sequelize.STRING,
     },
-    jutsus: {
-      type: Sequelize.ARRAY(Sequelize.STRING),
-    },
     img: {
       type: Sequelize.STRING,
     },

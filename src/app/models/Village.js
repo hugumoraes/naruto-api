@@ -10,6 +10,7 @@ class Village extends Model {
       },
       {
         sequelize,
+        tableName: 'villages',
       },
     );
   }

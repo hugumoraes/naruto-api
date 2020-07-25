@@ -2,10 +2,11 @@ import Sequelize from 'sequelize';
 
 import Village from '../app/models/Village';
 import Character from '../app/models/Character';
+import Jutsu from '../app/models/Jutsu';
 
 import databaseConfig from '../config/database';
 
-const models = [Village, Character];
+const models = [Village, Character, Jutsu];
 
 class Database {
   constructor() {
