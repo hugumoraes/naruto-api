@@ -3,9 +3,11 @@ import Character from '../models/Character';
 
 class JutsuController {
   async associateJutsuToCharacter(req, res) {
-    // Organizar e criar regra específica pra essa função
-    const jutsu = await Jutsu.findOne({ where: { name: 'Kage Bushin' } });
-    const character = await Character.findOne({ where: { first_name: 'Naruto' } });
+    // Criar validações
+    const { jutsu_name, character_name } = req.body;
+
+    const jutsu = await Jutsu.findOne({ where: { name: jutsu_name } });
+    const character = await Character.findOne({ where: { first_name: character_name } });
 
     await character.addJutsu(jutsu.id);
 
@@ -13,6 +15,7 @@ class JutsuController {
   }
 
   async create(req, res) {
+    // Criar Validações
     const { name, nature, kekkei_genkai } = req.body;
 
     const jutsu = await Jutsu.create({

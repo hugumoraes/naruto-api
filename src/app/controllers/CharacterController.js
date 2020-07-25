@@ -4,6 +4,8 @@ import Jutsu from '../models/Jutsu';
 
 class CharacterController {
   async show(req, res) {
+    // Criar validações
+
     const { name } = req.params;
     const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
 
