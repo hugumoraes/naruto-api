@@ -3,6 +3,20 @@ import Village from '../models/Village';
 import Jutsu from '../models/Jutsu';
 
 class CharacterController {
+  async list(req, res) {
+    const characters = await Character.findAll({
+      include: [{
+        model: Village,
+      }, {
+        model: Jutsu,
+        through: {
+          attributes: ['id'],
+        },
+      }],
+    });
+    return res.json(characters);
+  }
+
   async show(req, res) {
     // Criar validações
 
@@ -21,27 +35,7 @@ class CharacterController {
       }],
     });
 
-    return res.json(character);
-  }
-
-  async create(req, res) {
-    // Criar validações
-    const {
-      first_name, last_name, clan, village_name, ninja_rank, sex, img,
-    } = req.body;
-
-    const village = await Village.findOne({ where: { name: village_name } });
-    const village_id = village.id;
-
-    const character = await Character.create({
-      first_name,
-      last_name,
-      clan,
-      village_id,
-      ninja_rank,
-      sex,
-      img,
-    });
+    if (!character) return res.json({ error: 'Character not found' });
 
     return res.json(character);
   }

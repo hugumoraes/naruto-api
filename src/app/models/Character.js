@@ -21,7 +21,7 @@ class Character extends Model {
 
   static associate(models) {
     this.belongsTo(models.Village, { foreignKey: 'village_id' });
-    this.belongsToMany(models.Jutsu, { foreignKey: 'jutsu_id', through: 'characters_jutsus' });
+    this.belongsToMany(models.Jutsu, { foreignKey: 'character_id', through: 'characters_jutsus' });
   }
 }
 

@@ -8,10 +8,11 @@ const routes = Router();
 
 routes.get('/villages', VillageController.list);
 
-routes.post('/jutsus/1', JutsuController.associateJutsuToCharacter);
+routes.get('/jutsus', JutsuController.list);
 routes.post('/jutsus', JutsuController.create);
+routes.post('/jutsus/associate', JutsuController.associateJutsuToCharacter);
 
+routes.get('/characters/', CharacterController.list);
 routes.get('/characters/:name', CharacterController.show);
-routes.post('/characters/', CharacterController.create);
 
 export default routes;

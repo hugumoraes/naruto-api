@@ -16,7 +16,7 @@ class Jutsu extends Model {
   }
 
   static associate(models) {
-    this.belongsToMany(models.Character, { foreignKey: 'character_id', through: 'characters_jutsus' });
+    this.belongsToMany(models.Character, { foreignKey: 'jutsu_id', through: 'characters_jutsus' });
   }
 }
 
