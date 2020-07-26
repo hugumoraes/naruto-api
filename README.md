@@ -2,7 +2,7 @@
 
 # How to use
 
-Install the dependecies
+Install the dependencies
 
 ```
   $ yarn
