@@ -36,63 +36,6 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
       },
-      {
-        name: 'Oodama Rasengan',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Chou Oodama Rasengan',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Chou Mini Bijūdama',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Bijuudama Rasenshuriken',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Youton Rasenshuriken',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Jiton Rasengan',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Rasenrangan',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-      {
-        name: 'Gudoudama',
-        nature: 'none',
-        kekkei_genkai: false,
-        created_at: new Date(),
-        updated_at: new Date(),
-      },
-
     ], {});
   },
 

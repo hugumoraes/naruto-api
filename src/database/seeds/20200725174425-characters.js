@@ -23,6 +23,28 @@ module.exports = {
         created_at: new Date(),
         updated_at: new Date(),
       },
+      {
+        first_name: 'Sakura',
+        last_name: 'Haruno',
+        clan: 'Haruno',
+        village_id: 4,
+        ninja_rank: 'Genin',
+        sex: 'Feminine',
+        img: 'https://vignette.wikia.nocookie.net/naruto/images/c/cf/Sakura_%28Naruto_Cl%C3%A1ssico%29.png/revision/latest?cb=20180211141243&path-prefix=pt-br',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
+      {
+        first_name: 'Kakashi',
+        last_name: 'Hatake',
+        clan: 'Hatake',
+        village_id: 4,
+        ninja_rank: 'Jounin',
+        sex: 'Masculine',
+        img: 'https://pbs.twimg.com/profile_images/922530905889083396/alDFqgh8_400x400.jpg',
+        created_at: new Date(),
+        updated_at: new Date(),
+      },
     ], {});
   },
 
