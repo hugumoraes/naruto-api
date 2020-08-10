@@ -26,8 +26,11 @@ class JutsuController {
     const jutsu = await Jutsu.findOne({ where: { name: jutsu_name } });
     if (!jutsu) return res.status(400).json({ error: 'Jutsu not found' });
 
-    let character = await Character.findOne({ where: { first_name: character_name } });
-    if (!character) return res.status(400).json({ error: 'Character not found' });
+    let character = await Character.findOne({
+      where: { first_name: character_name },
+    });
+    if (!character)
+      return res.status(400).json({ error: 'Character not found' });
 
     character = await character.addJutsu(jutsu);
 

@@ -12,7 +12,7 @@ routes.get('/jutsus', JutsuController.list);
 routes.post('/jutsus', JutsuController.create);
 routes.post('/jutsus/associate', JutsuController.associateJutsuToCharacter);
 
-routes.get('/characters/', CharacterController.list);
+routes.get('/characters', CharacterController.index);
 routes.get('/characters/:name', CharacterController.show);
 
 export default routes;
